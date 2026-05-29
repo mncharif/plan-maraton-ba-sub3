@@ -616,6 +616,33 @@ header {
   }
 }
 
+
+/* Accordion de semanas */
+.week-section .sessions {
+  display: none;
+}
+.week-section.active-week .sessions {
+  display: flex;
+}
+.week-header {
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+.week-header:hover {
+  background: #333;
+}
+.week-header::after {
+  content: '▼';
+  font-size: 12px;
+  opacity: 0.5;
+  margin-left: 12px;
+}
+.week-section.active-week .week-header::after {
+  content: '▲';
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .title-main {
     font-size: 48px;
@@ -1088,11 +1115,11 @@ function render() {
   
   PLAN.forEach(week => {
     const weekDiv = document.createElement('div');
-    weekDiv.className = 'week-section';
+    weekDiv.className = 'week-section' + (week.week === currentWeek ? ' active-week' : '');
     weekDiv.id = `week-${week.week}`;
     
     const header = `
-      <div class="week-header">
+      <div class="week-header" onclick="toggleWeek(${week.week})">
         <div class="week-header-left">
           <div class="week-number">Semana ${week.week}</div>
           <div class="week-dates">${week.start} — ${week.end}</div>
@@ -1196,6 +1223,24 @@ function attachListeners() {
   });
 }
 
+
+function toggleWeek(weekNum) {
+  const target = document.getElementById(`week-${weekNum}`);
+  const isActive = target.classList.contains('active-week');
+  
+  // Cerrar todas las semanas
+  document.querySelectorAll('.week-section').forEach(s => s.classList.remove('active-week'));
+  
+  // Si no estaba activa, abrirla
+  if (!isActive) {
+    target.classList.add('active-week');
+    // Actualizar nav button
+    document.querySelectorAll('.week-btn').forEach(b => b.classList.remove('active'));
+    const btn = document.querySelector(`.week-btn[data-week="${weekNum}"]`);
+    if (btn) btn.classList.add('active');
+  }
+}
+
 function createWeekNav() {
   const nav = document.getElementById('week-nav');
   nav.innerHTML = '';
@@ -1206,10 +1251,12 @@ function createWeekNav() {
     if (w.week === 19) btn.classList.add('race');
     if (w.week === currentWeek) btn.classList.add('active');
     btn.textContent = `s${String(w.week).padStart(2, '0')}`;
+    btn.setAttribute('data-week', w.week);
     btn.onclick = () => {
-      document.getElementById(`week-${w.week}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
-      document.querySelectorAll('.week-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      toggleWeek(w.week);
+      setTimeout(() => {
+        document.getElementById(`week-${w.week}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
     };
     nav.appendChild(btn);
   });
@@ -1217,7 +1264,10 @@ function createWeekNav() {
 
 // Actions
 document.getElementById('btn-today').onclick = () => {
-  document.getElementById(`week-${currentWeek}`).scrollIntoView({ behavior: 'smooth' });
+  toggleWeek(currentWeek);
+  setTimeout(() => {
+    document.getElementById(`week-${currentWeek}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 50);
 };
 
 document.getElementById('btn-export').onclick = () => {
