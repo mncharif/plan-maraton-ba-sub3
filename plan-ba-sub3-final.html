@@ -201,17 +201,58 @@ header {
 }
 
 .week-btn {
-  padding: 10px 16px;
+  padding: 8px 12px;
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text-light);
   border-radius: 4px;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 600;
   font-family: 'Inter', monospace;
   transition: all 0.2s;
   text-transform: lowercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 64px;
+}
+.week-btn .btn-week-num {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+.week-btn .btn-week-dates {
+  font-size: 9px;
+  font-weight: 400;
+  opacity: 0.7;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 8px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+.back-to-top button {
+  padding: 8px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-light);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+.back-to-top button:hover {
+  background: var(--text);
+  color: var(--surface);
+  border-color: var(--text);
 }
 
 .week-btn:hover {
@@ -775,7 +816,7 @@ const PLAN = [
       {type:'gym',title:'Gym tren inferior',detail:'75 min (considerar reducir volumen si fatiga acumulada).',km:0,dur:75},
       {type:'quality',title:'Test de zonas v2',detail:'10 km: <strong>3 km cal + 10\' @ Z4 (4:15-4:20/km) + 5\' trote rec + 20\' @ umbral (4:15/km) + 2 km enfriamiento</strong>. Mismo protocolo del 9-may, con Whoop y banda calibrados.',km:10,pace:'4:15-4:20',dur:55,metrics:{primary:'Ritmo 4:15-4:20/km',secondary:'FC 162-171 ppm (Z4)'},shoe:'Clifton 10'},
       {type:'rest',title:'Descanso total',detail:'Recuperación completa antes del fondo largo.',km:0,dur:0},
-      {type:'long',title:'Fondo 22 km con MP intercalado',detail:'22 km: <strong>5 km Z2 + 4×(1 km @ 4:15 MP + 2 km Z2) + 3 km Z2</strong>. <strong>2 geles (km 10, 16).</strong>',km:22,pace:'Z2 + MP 4:15',dur:115,metrics:{primary:'FC Z2 base, Z3-Z4 en MP',secondary:'Ritmo 4:15/km en MP'},shoe:'Bondi 9'},
+      {type:'long',title:'Fondo 22 km con MP intercalado',detail:'22 km: <strong>7 km Z2 + 4×(1 km @ 4:15 MP + 2 km Z2) + 3 km Z2</strong>. <strong>2 geles (km 10, 16).</strong>',km:22,pace:'Z2 + MP 4:15',dur:115,metrics:{primary:'FC Z2 base, Z3-Z4 en MP',secondary:'Ritmo 4:15/km en MP'},shoe:'Bondi 9'},
       {type:'z2',title:'Regenerativo corto',detail:'6 km Z1.',km:6,pace:'>6:00',dur:45,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >6:00/km'},shoe:'Bondi 9'}
     ]
   },
@@ -899,7 +940,7 @@ const PLAN = [
     kmTarget: 68,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'75 min.',km:0,dur:75},
-      {type:'quality',title:'Intervalos MP 6×2km',detail:'16 km: <strong>3 km cal + 6×2km @ 4:15/km (MP) con rec 2\' trote + 2 km enfriamiento</strong>.',km:16,pace:'MP 4:15',dur:85,metrics:{primary:'Ritmo 4:15/km',secondary:'FC series 160-170 ppm (Z3-Z4)'},shoe:'Clifton 10'},
+      {type:'quality',title:'Intervalos MP 6×2km',detail:'16 km: <strong>2 km cal + 6×2km @ 4:15/km (MP) con rec 2\' trote + 2 km enfriamiento</strong>.',km:16,pace:'MP 4:15',dur:85,metrics:{primary:'Ritmo 4:15/km',secondary:'FC series 160-170 ppm (Z3-Z4)'},shoe:'Clifton 10'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
       {type:'z2',title:'Z2 largo',detail:'16 km: Z2 @ 5:10-5:25/km.',km:16,pace:'5:10-5:25',dur:90,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
@@ -931,7 +972,7 @@ const PLAN = [
     kmTarget: 66,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'75 min.',km:0,dur:75},
-      {type:'quality',title:'Intervalos MP 5×3km',detail:'18 km: <strong>3 km cal + 5×3km @ 4:15/km (MP) con rec 2\' trote + 2 km enfriamiento</strong>.',km:18,pace:'MP 4:15',dur:95,metrics:{primary:'Ritmo 4:15/km',secondary:'FC series 160-170 ppm (Z3-Z4)'},shoe:'Clifton 10'},
+      {type:'quality',title:'Intervalos MP 5×3km',detail:'18 km: <strong>1 km cal + 5×3km @ 4:15/km (MP) con rec 2\' trote + 2 km enfriamiento</strong>.',km:18,pace:'MP 4:15',dur:95,metrics:{primary:'Ritmo 4:15/km',secondary:'FC series 160-170 ppm (Z3-Z4)'},shoe:'Clifton 10'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
       {type:'z2',title:'Z2 medio',detail:'14 km: Z2 @ 5:10-5:25/km.',km:14,pace:'5:10-5:25',dur:80,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
@@ -1191,7 +1232,8 @@ function render() {
       `;
     }).join('');
     
-    weekDiv.innerHTML = header + `<div class="sessions">${sessionsHTML}</div>`;
+    const backBtn = `<div class="back-to-top"><button onclick="document.getElementById('week-nav').scrollIntoView({behavior:'smooth', block:'start'})">↑ Volver a semanas</button></div>`;
+    weekDiv.innerHTML = header + `<div class="sessions">${sessionsHTML}${backBtn}</div>`;
     container.appendChild(weekDiv);
   });
   
@@ -1250,7 +1292,7 @@ function createWeekNav() {
     btn.className = 'week-btn';
     if (w.week === 19) btn.classList.add('race');
     if (w.week === currentWeek) btn.classList.add('active');
-    btn.textContent = `s${String(w.week).padStart(2, '0')}`;
+    btn.innerHTML = `<span class="btn-week-num">s${String(w.week).padStart(2, '0')}</span><span class="btn-week-dates">${w.start} – ${w.end}</span>`;
     btn.setAttribute('data-week', w.week);
     btn.onclick = () => {
       toggleWeek(w.week);
