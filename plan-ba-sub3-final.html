@@ -666,6 +666,9 @@ header {
   <div class="header-top">PLAN V2 · 19 SEMANAS · MAURI CHARIF</div>
   <h1 class="title-main">Camino al <span class="sub">sub-3:00</span></h1>
   <div class="subtitle">Maratón de Buenos Aires · 20 septiembre 2026</div>
+  <div style="max-width:1400px;margin:0 auto 24px;padding:12px 16px;background:#fff;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:4px;font-size:12px;color:var(--text-light);line-height:1.5;">
+    <strong style="color:var(--text);">Zonas FC (LTHR 171, test 26 may):</strong> Z1 &lt;145 · Z2 145-152 · Z3 153-161 · Z4 162-171 · Z5 &gt;171 &nbsp;|&nbsp; <strong style="color:var(--text);">En sesiones Z2/recuperación FC manda</strong> (el ritmo es consecuencia; en calor o fatiga será más lento a igual FC). &nbsp;|&nbsp; <strong style="color:var(--text);">En Santiago GAP manda</strong> en bloques de calidad; ruta preferida eje norte-sur (curva de nivel).
+  </div>
   
   <div class="stats-grid">
     <div class="stat-card">
@@ -726,12 +729,12 @@ const PLAN = [
     kmTarget: 45,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'75 min: pecho, tríceps, hombros. 3 ejerc × 3 series. <strong>+ 10\' movilidad cadera</strong> (importante para pie plano).',km:0,dur:85},
-      {type:'z2',title:'Z2 + strides',detail:'8 km: Z2 @ 5:10-5:20/km + 6×100m strides progresivos.',km:8,pace:'5:10-5:20',dur:50,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:20/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 + strides',detail:'8 km: Z2 @ 5:10-5:20/km + 6×100m strides progresivos.',km:8,pace:'5:10-5:20',dur:50,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:10-5:20/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min: cuádriceps, isquios, glúteos, pantorrillas. 3 ejerc × 3 series.',km:0,dur:75},
-      {type:'quality',title:'Tempo corto',detail:'10 km: <strong>3 km cal + 4 km @ 4:25/km + 3 km enfriamiento</strong>.',km:10,pace:'4:25',dur:55,metrics:{primary:'Ritmo 4:25/km',secondary:'FC 158-165 ppm (Z3 alta)'},shoe:'Clifton 10'},
+      {type:'quality',title:'Tempo corto',detail:'10 km: <strong>3 km cal + 4 km @ 4:25/km + 3 km enfriamiento</strong>.',km:10,pace:'4:25',dur:55,metrics:{primary:'Ritmo 4:25/km',secondary:'FC 155-162 ppm (Z3 alta)'},shoe:'Clifton 10'},
       {type:'gym',title:'Gym tren superior',detail:'75 min: espalda, bíceps, trapecios, deltoides.',km:0,dur:75},
-      {type:'long',title:'Fondo progresivo 18 km',detail:'18 km: <strong>km 1-13 @ 5:15-5:25/km (Z2), últimos 5 km @ 4:40-4:50/km (Z3)</strong>. <strong>1 gel en km 10.</strong>',km:18,pace:'5:15-5:25 → 4:40-4:50',dur:95,metrics:{primary:'FC Z2 (148-155) → Z3 (156-164)',secondary:'Ritmos 5:15-5:25 → 4:40-4:50'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo muy suave',detail:'6 km Z1 + movilidad 10\'. <strong>Regla estricta:</strong> si FC sube >145, frenar o caminar.',km:6,pace:'>5:50',dur:45,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo progresivo 18 km',detail:'18 km: <strong>km 1-13 @ 4:55-5:05/km (Z2), últimos 5 km @ 4:40-4:50/km (Z3)</strong>. <strong>1 gel en km 10.</strong>',km:18,pace:'4:55-5:05 → 4:40-4:50',dur:95,metrics:{primary:'FC Z2 (145-152) → Z3 (153-161)',secondary:'Ritmos 4:55-5:05 → 4:40-4:50'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo muy suave',detail:'6 km Z1 + movilidad 10\'. <strong>Regla estricta:</strong> si FC sube >145, frenar o caminar.',km:6,pace:'>5:50',dur:45,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -744,10 +747,10 @@ const PLAN = [
       {type:'gym',title:'Gym tren superior',detail:'75 min: pecho, tríceps, hombros.',km:0,dur:75},
       {type:'quality',title:'Intervalos 5×1000m',detail:'10 km: <strong>3 km cal + 5×1000m @ 3:55-4:00/km (rec 200m trote o hasta FC <150) + 2 km enfriamiento</strong>.',km:10,pace:'3:55-4:00',dur:55,metrics:{primary:'Ritmo 3:55-4:00/km',secondary:'FC series 165-180, rec <150'},shoe:'Clifton 10'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min: cuádriceps, isquios, glúteos, pantorrillas.',km:0,dur:75},
-      {type:'z2',title:'Z2 medio',detail:'11 km: Z2 @ 5:10-5:25/km + 6×100m strides.',km:11,pace:'5:10-5:25',dur:65,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 medio',detail:'11 km: Z2 @ 4:50-5:05/km + 6×100m strides.',km:11,pace:'4:50-5:05',dur:65,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren superior',detail:'75 min: espalda, bíceps, trapecios.',km:0,dur:75},
-      {type:'long',title:'Fondo progresivo 20 km',detail:'20 km: <strong>km 1-15 @ 5:15-5:25/km (Z2), últimos 5 km @ 4:30/km (Z3 / maratón-menos)</strong>. <strong>1-2 geles (km 10 y 16).</strong>',km:20,pace:'5:15-5:25 → 4:30',dur:105,metrics:{primary:'FC Z2 (148-155) → Z3 (156-164)',secondary:'Ritmos 5:15-5:25 → 4:30'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo',detail:'7 km Z1 + movilidad. Si FC no baja, reducir a 3-4 km y caminar.',km:7,pace:'>5:50',dur:50,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo progresivo 20 km',detail:'20 km: <strong>km 1-15 @ 4:55-5:05/km (Z2), últimos 5 km @ 4:30/km (Z3 / maratón-menos)</strong>. <strong>1-2 geles (km 10 y 16).</strong>',km:20,pace:'4:55-5:05 → 4:30',dur:105,metrics:{primary:'FC Z2 (145-152) → Z3 (153-161)',secondary:'Ritmos 4:55-5:05 → 4:30'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo',detail:'7 km Z1 + movilidad. Si FC no baja, reducir a 3-4 km y caminar.',km:7,pace:'>5:50',dur:50,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -758,12 +761,12 @@ const PLAN = [
     kmTarget: 50,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'75 min: pecho, tríceps, hombros.',km:0,dur:75},
-      {type:'z2',title:'Z2 + strides',detail:'12 km: Z2 @ 5:10-5:25/km + 8×100m strides.',km:12,pace:'5:10-5:25',dur:70,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 + strides',detail:'12 km: Z2 @ 4:50-5:05/km + 8×100m strides.',km:12,pace:'4:50-5:05',dur:70,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min (considerar reducir volumen si fatiga acumulada).',km:0,dur:75},
-      {type:'quality',title:'Test de zonas v2',detail:'10 km: <strong>3 km cal + 10\' @ Z4 (4:15-4:20/km) + 5\' trote rec + 20\' @ umbral (4:15/km) + 2 km enfriamiento</strong>. Mismo protocolo del 9-may, con Whoop y banda calibrados.',km:10,pace:'4:15-4:20',dur:55,metrics:{primary:'Ritmo 4:15-4:20/km',secondary:'FC 165-174 ppm (Z4)'},shoe:'Clifton 10'},
+      {type:'quality',title:'Test de zonas v2',detail:'10 km: <strong>3 km cal + 10\' @ Z4 (4:15-4:20/km) + 5\' trote rec + 20\' @ umbral (4:15/km) + 2 km enfriamiento</strong>. Mismo protocolo del 9-may, con Whoop y banda calibrados.',km:10,pace:'4:15-4:20',dur:55,metrics:{primary:'Ritmo 4:15-4:20/km',secondary:'FC 162-171 ppm (Z4)'},shoe:'Clifton 10'},
       {type:'rest',title:'Descanso total',detail:'Recuperación completa antes del fondo largo.',km:0,dur:0},
       {type:'long',title:'Fondo 22 km con MP intercalado',detail:'22 km: <strong>5 km Z2 + 4×(1 km @ 4:15 MP + 2 km Z2) + 3 km Z2</strong>. <strong>2 geles (km 10, 16).</strong>',km:22,pace:'Z2 + MP 4:15',dur:115,metrics:{primary:'FC Z2 base, Z3-Z4 en MP',secondary:'Ritmo 4:15/km en MP'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo corto',detail:'6 km Z1.',km:6,pace:'>6:00',dur:45,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >6:00/km'},shoe:'Bondi 9'}
+      {type:'z2',title:'Regenerativo corto',detail:'6 km Z1.',km:6,pace:'>6:00',dur:45,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >6:00/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -774,11 +777,11 @@ const PLAN = [
     kmTarget: 31,
     sessions: [
       {type:'gym',title:'Gym tren superior ligero',detail:'60 min: volumen reducido, focus técnica.',km:0,dur:60},
-      {type:'z2',title:'Z2 suave',detail:'8 km: Z2 @ 5:20-5:35/km.',km:8,pace:'5:20-5:35',dur:50,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:20-5:35/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 suave',detail:'8 km: Z2 @ 5:00-5:15/km.',km:8,pace:'5:00-5:15',dur:50,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:00-5:15/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior ligero',detail:'60 min: 2 ejerc × 2 series, activación no hipertrofia.',km:0,dur:60},
-      {type:'quality',title:'Tempo corto',detail:'8 km: <strong>2 km cal + 4 km @ 4:30/km + 2 km enfriamiento</strong>.',km:8,pace:'4:30',dur:45,metrics:{primary:'Ritmo 4:30/km',secondary:'FC 160-167 ppm (Z3)'},shoe:'Clifton 10'},
+      {type:'quality',title:'Tempo corto',detail:'8 km: <strong>2 km cal + 4 km @ 4:30/km + 2 km enfriamiento</strong>.',km:8,pace:'4:30',dur:45,metrics:{primary:'Ritmo 4:30/km',secondary:'FC 157-161 ppm (Z3)'},shoe:'Clifton 10'},
       {type:'rest',title:'Descanso total',detail:'Recuperación.',km:0,dur:0},
-      {type:'long',title:'Fondo regenerativo 15 km',detail:'15 km: Z2 @ 5:20-5:35/km. <strong>1 gel en km 10.</strong>',km:15,pace:'5:20-5:35',dur:85,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:20-5:35/km'},shoe:'Bondi 9'},
+      {type:'long',title:'Fondo regenerativo 15 km',detail:'15 km: Z2 @ 5:00-5:15/km. <strong>1 gel en km 10.</strong>',km:15,pace:'5:00-5:15',dur:85,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:00-5:15/km'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso o caminata',detail:'Movilidad opcional.',km:0,dur:0}
     ]
   },
@@ -790,12 +793,12 @@ const PLAN = [
     kmTarget: 54,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'<strong>NOTA: Reducir gimnasio a 3x/semana desde hoy.</strong> 75 min.',km:0,dur:75},
-      {type:'z2',title:'Z2 medio',detail:'12 km: Z2 @ 5:10-5:25/km + 6×100m strides.',km:12,pace:'5:10-5:25',dur:70,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 medio',detail:'12 km: Z2 @ 4:50-5:05/km + 6×100m strides.',km:12,pace:'4:50-5:05',dur:70,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso',detail:'No gym esta semana (martes/jueves).',km:0,dur:0},
-      {type:'quality',title:'Tempo medio',detail:'12 km: <strong>3 km cal + 6 km @ 4:25/km + 3 km enfriamiento</strong>.',km:12,pace:'4:25',dur:65,metrics:{primary:'Ritmo 4:25/km',secondary:'FC 160-167 ppm (Z3)'},shoe:'Clifton 10'},
+      {type:'quality',title:'Tempo medio',detail:'12 km: <strong>3 km cal + 6 km @ 4:25/km + 3 km enfriamiento</strong>.',km:12,pace:'4:25',dur:65,metrics:{primary:'Ritmo 4:25/km',secondary:'FC 157-161 ppm (Z3)'},shoe:'Clifton 10'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
-      {type:'long',title:'Fondo 24 km',detail:'24 km: <strong>km 1-18 @ 5:15-5:25/km (Z2), últimos 6 km @ 4:35-4:40/km (Z3)</strong>. <strong>2 geles (km 10, 18).</strong>',km:24,pace:'5:15-5:25 → 4:35-4:40',dur:125,metrics:{primary:'FC Z2 (148-155) → Z3',secondary:'Ritmos 5:15-5:25 → 4:35-4:40'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo',detail:'8 km Z1.',km:8,pace:'>5:50',dur:55,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo 24 km',detail:'24 km: <strong>km 1-18 @ 4:55-5:05/km (Z2), últimos 6 km @ 4:35-4:40/km (Z3)</strong>. <strong>2 geles (km 10, 18).</strong>',km:24,pace:'4:55-5:05 → 4:35-4:40',dur:125,metrics:{primary:'FC Z2 (145-152) → Z3',secondary:'Ritmos 4:55-5:05 → 4:35-4:40'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo',detail:'8 km Z1.',km:8,pace:'>5:50',dur:55,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -808,10 +811,10 @@ const PLAN = [
       {type:'gym',title:'Gym tren superior',detail:'75 min.',km:0,dur:75},
       {type:'quality',title:'Intervalos 6×1200m',detail:'12 km: <strong>3 km cal + 6×1200m @ 3:55-4:00/km (rec 300m trote o hasta FC <150) + 2 km enfriamiento</strong>.',km:12,pace:'3:55-4:00',dur:65,metrics:{primary:'Ritmo 3:55-4:00/km',secondary:'FC series 165-180, rec <150'},shoe:'Clifton 10'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'z2',title:'Z2 largo',detail:'14 km: Z2 @ 5:10-5:25/km + 6×100m strides.',km:14,pace:'5:10-5:25',dur:80,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 largo',detail:'14 km: Z2 @ 4:50-5:05/km + 6×100m strides.',km:14,pace:'4:50-5:05',dur:80,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
-      {type:'long',title:'Fondo 26 km',detail:'26 km: <strong>km 1-19 @ 5:15-5:25/km (Z2), últimos 7 km @ 4:30/km (Z3 / maratón-menos)</strong>. <strong>2-3 geles (km 10, 18, 23).</strong>',km:26,pace:'5:15-5:25 → 4:30',dur:135,metrics:{primary:'FC Z2 (148-155) → Z3 (156-164)',secondary:'Ritmos 5:15-5:25 → 4:30'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo',detail:'8 km Z1.',km:8,pace:'>5:50',dur:55,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo 26 km',detail:'26 km: <strong>km 1-19 @ 4:55-5:05/km (Z2), últimos 7 km @ 4:30/km (Z3 / maratón-menos)</strong>. <strong>2-3 geles (km 10, 18, 23).</strong>',km:26,pace:'4:55-5:05 → 4:30',dur:135,metrics:{primary:'FC Z2 (145-152) → Z3 (153-161)',secondary:'Ritmos 4:55-5:05 → 4:30'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo',detail:'8 km Z1.',km:8,pace:'>5:50',dur:55,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -822,12 +825,12 @@ const PLAN = [
     kmTarget: 61,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'75 min.',km:0,dur:75},
-      {type:'z2',title:'Z2 + strides',detail:'13 km: Z2 @ 5:10-5:25/km + 8×100m strides.',km:13,pace:'5:10-5:25',dur:75,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 + strides',detail:'13 km: Z2 @ 4:50-5:05/km + 8×100m strides.',km:13,pace:'4:50-5:05',dur:75,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
-      {type:'quality',title:'Tempo largo',detail:'14 km: <strong>3 km cal + 8 km @ 4:25/km + 3 km enfriamiento</strong>.',km:14,pace:'4:25',dur:75,metrics:{primary:'Ritmo 4:25/km',secondary:'FC 160-167 ppm (Z3)'},shoe:'Clifton 10'},
+      {type:'quality',title:'Tempo largo',detail:'14 km: <strong>3 km cal + 8 km @ 4:25/km + 3 km enfriamiento</strong>.',km:14,pace:'4:25',dur:75,metrics:{primary:'Ritmo 4:25/km',secondary:'FC 157-161 ppm (Z3)'},shoe:'Clifton 10'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'long',title:'Fondo 28 km',detail:'28 km: <strong>km 1-20 @ 5:15-5:25/km (Z2), últimos 8 km @ 4:30/km (Z3 / maratón-menos)</strong>. <strong>3 geles (km 10, 18, 24).</strong>',km:28,pace:'5:15-5:25 → 4:30',dur:145,metrics:{primary:'FC Z2 (148-155) → Z3 (156-164)',secondary:'Ritmos 5:15-5:25 → 4:30'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo',detail:'8 km Z1.',km:8,pace:'>5:50',dur:55,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo 28 km',detail:'28 km: <strong>km 1-20 @ 4:55-5:05/km (Z2), últimos 8 km @ 4:30/km (Z3 / maratón-menos)</strong>. <strong>3 geles (km 10, 18, 24).</strong>',km:28,pace:'4:55-5:05 → 4:30',dur:145,metrics:{primary:'FC Z2 (145-152) → Z3 (153-161)',secondary:'Ritmos 4:55-5:05 → 4:30'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo',detail:'8 km Z1.',km:8,pace:'>5:50',dur:55,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -840,10 +843,10 @@ const PLAN = [
       {type:'gym',title:'Gym tren superior',detail:'75 min.',km:0,dur:75},
       {type:'quality',title:'Intervalos 8×1000m',detail:'13 km: <strong>3 km cal + 8×1000m @ 3:55-4:00/km (rec 200m trote o hasta FC <150) + 2 km enfriamiento</strong>.',km:13,pace:'3:55-4:00',dur:70,metrics:{primary:'Ritmo 3:55-4:00/km',secondary:'FC series 165-180, rec <150'},shoe:'Clifton 10'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'z2',title:'Z2 largo',detail:'15 km: Z2 @ 5:10-5:25/km.',km:15,pace:'5:10-5:25',dur:85,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 largo',detail:'15 km: Z2 @ 4:50-5:05/km.',km:15,pace:'4:50-5:05',dur:85,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
-      {type:'long',title:'Fondo pico 30 km',detail:'30 km: <strong>km 1-21 @ 5:15-5:25/km (Z2), últimos 9 km @ 4:30/km (Z3 / maratón-menos)</strong>. Fondo pico de la primera ola aeróbica. <strong>3-4 geles (km 10, 18, 24, 27).</strong> <strong>⛰️ Subida/bajada:</strong> bajá primero en Z2 hacia el poniente (Juan Pablo II/Araucano), girá en el punto bajo (~km15) y volvé subiendo. El bloque 4:30 va AL FINAL, en la subida sostenida de regreso a casa — estímulo aeróbico parejo y protege el antepié.',km:30,pace:'5:15-5:25 → 4:30',dur:155,metrics:{primary:'FC Z2 (148-155) → Z3 (156-164)',secondary:'Ritmos 5:15-5:25 → 4:30'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo',detail:'8 km Z1. <strong>⛰️ Subida/bajada:</strong> Z1 regenerativo — subí primero, bajá muy suave de vuelta. Bajada fresca protege el antepié.',km:8,pace:'>5:50',dur:55,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo pico 30 km',detail:'30 km: <strong>km 1-21 @ 4:55-5:05/km (Z2), últimos 9 km @ 4:30/km (Z3 / maratón-menos)</strong>. Fondo pico de la primera ola aeróbica. <strong>3-4 geles (km 10, 18, 24, 27).</strong> <strong>⛰️ Terreno (pref. ruta norte-sur plana):</strong> si no hay ruta plana, bajá primero en Z2 hacia el poniente (Juan Pablo II/Araucano), girá en el punto bajo (~km15) y volvé subiendo. El bloque 4:30 va AL FINAL, en la subida sostenida de regreso a casa — estímulo aeróbico parejo y protege el antepié.',km:30,pace:'4:55-5:05 → 4:30',dur:155,metrics:{primary:'FC Z2 (145-152) → Z3 (153-161)',secondary:'Ritmos 4:55-5:05 → 4:30'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo',detail:'8 km Z1. <strong>⛰️ Terreno:</strong> Z1 regenerativo — subí primero, bajá muy suave de vuelta. Bajada fresca protege el antepié.',km:8,pace:'>5:50',dur:55,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -854,11 +857,11 @@ const PLAN = [
     kmTarget: 38,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'60 min: volumen reducido.',km:0,dur:60},
-      {type:'z2',title:'Z2 suave',detail:'10 km: Z2 @ 5:20-5:35/km. <strong>⛰️ Subida/bajada:</strong> Z2 suave — subí primero, bajá de vuelta. Post-pico, sin exigencia.',km:10,pace:'5:20-5:35',dur:60,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:20-5:35/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 suave',detail:'10 km: Z2 @ 5:00-5:15/km. <strong>⛰️ Terreno:</strong> Z2 suave — subí primero, bajá de vuelta. Post-pico, sin exigencia.',km:10,pace:'5:00-5:15',dur:60,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:00-5:15/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'60 min: ligero.',km:0,dur:60},
-      {type:'quality',title:'Tempo corto',detail:'10 km: <strong>2 km cal + 6 km @ 4:25/km + 2 km enfriamiento</strong>. <strong>⛰️ Subida/bajada:</strong> bloque 4:25 en el tramo más parejo cercano; el objetivo es ritmo constante, evitá pendientes bruscas que rompan el ritmo.',km:10,pace:'4:25',dur:55,metrics:{primary:'Ritmo 4:25/km',secondary:'FC 160-167 ppm (Z3)'},shoe:'Clifton 10'},
+      {type:'quality',title:'Tempo corto',detail:'10 km: <strong>2 km cal + 6 km @ 4:25/km + 2 km enfriamiento</strong>. <strong>⛰️ Terreno:</strong> bloque 4:25 en el tramo más parejo cercano; el objetivo es ritmo constante, evitá pendientes bruscas que rompan el ritmo.',km:10,pace:'4:25',dur:55,metrics:{primary:'Ritmo 4:25/km',secondary:'FC 157-161 ppm (Z3)'},shoe:'Clifton 10'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'long',title:'Fondo regenerativo 18 km',detail:'18 km: Z2 @ 5:20-5:35/km. <strong>2 geles (km 10, 15).</strong> <strong>⛰️ Subida/bajada:</strong> Z2 parejo, sin bloque. Subí primero, bajá suave (calibra FC subiendo, protege antepié bajando fresco).',km:18,pace:'5:20-5:35',dur:100,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:20-5:35/km'},shoe:'Bondi 9'},
+      {type:'long',title:'Fondo regenerativo 18 km',detail:'18 km: Z2 @ 5:00-5:15/km. <strong>2 geles (km 10, 15).</strong> <strong>⛰️ Terreno:</strong> Z2 parejo, sin bloque. Subí primero, bajá suave (calibra FC subiendo, protege antepié bajando fresco).',km:18,pace:'5:00-5:15',dur:100,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:00-5:15/km'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso o caminata',detail:'Movilidad.',km:0,dur:0}
     ]
   },
@@ -870,12 +873,12 @@ const PLAN = [
     kmTarget: 65,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'75 min.',km:0,dur:75},
-      {type:'z2',title:'Z2 + strides',detail:'14 km: Z2 @ 5:10-5:25/km + 8×100m strides. <strong>⛰️ Subida/bajada:</strong> Z2 + strides — subí primero, bajá de vuelta; strides en el tramo más llano al final.',km:14,pace:'5:10-5:25',dur:80,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 + strides',detail:'14 km: Z2 @ 4:50-5:05/km + 8×100m strides. <strong>⛰️ Terreno:</strong> Z2 + strides — subí primero, bajá de vuelta; strides en el tramo más llano al final.',km:14,pace:'4:50-5:05',dur:80,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
-      {type:'quality',title:'Tempo umbral',detail:'13 km: <strong>3 km cal + 7 km @ 4:15/km (umbral) + 3 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 1/5:</strong> primer contacto con placa del ciclo. Chequeo de rodilla post-sesión obligatorio. <strong>⛰️ Subida/bajada:</strong> bloque 4:15 (MP) en el tramo de pendiente más pareja cercano a casa; ritmo constante manda, no persigas GAP en repechos.',km:13,pace:'4:15',dur:70,metrics:{primary:'Ritmo 4:15/km (ritmo MP)',secondary:'FC 165-174 ppm (Z4)'},shoe:'Mach X 2'},
+      {type:'quality',title:'Tempo umbral',detail:'13 km: <strong>3 km cal + 7 km @ 4:15/km (umbral) + 3 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 1/5:</strong> primer contacto con placa del ciclo. Chequeo de rodilla post-sesión obligatorio. <strong>⛰️ Terreno:</strong> bloque 4:15 (MP) en el tramo de pendiente más pareja cercano a casa; ritmo constante manda, no persigas GAP en repechos.',km:13,pace:'4:15',dur:70,metrics:{primary:'Ritmo 4:15/km (ritmo MP)',secondary:'FC 162-171 ppm (Z4)'},shoe:'Mach X 2'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'long',title:'Fondo específico MP 28 km',detail:'28 km: <strong>5 km Z2 + 18 km @ 4:15/km (MP) + 5 km Z2</strong>. Trabajo específico de ritmo maratón. <strong>3-4 geles (km 8, 16, 22, 25).</strong> <strong>⛰️ Subida/bajada:</strong> bloque MP (4:15) AL FINAL, bajando de regreso a casa. Aquí SÍ terminás bajando: es MP puro (especificidad de carrera), la bajada ayuda a sostener ritmo con piernas cansadas, como el maratón real. Ojo antepié en la bajada a ritmo — Bondi 9, regla de aborto vigente.',km:28,pace:'MP 4:15',dur:140,metrics:{primary:'FC Z3-Z4 en bloque MP',secondary:'Ritmo 4:15/km sostenido'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo',detail:'10 km Z1. <strong>⛰️ Subida/bajada:</strong> Z1 regenerativo — subí primero, bajá muy suave.',km:10,pace:'>5:50',dur:65,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo específico MP 28 km',detail:'28 km: <strong>5 km Z2 + 18 km @ 4:15/km (MP) + 5 km Z2</strong>. Trabajo específico de ritmo maratón. <strong>3-4 geles (km 8, 16, 22, 25).</strong> <strong>⛰️ Terreno (pref. ruta norte-sur plana):</strong> si no hay ruta plana, bloque MP (4:15) AL FINAL, bajando de regreso a casa. Aquí SÍ terminás bajando: es MP puro (especificidad de carrera), la bajada ayuda a sostener ritmo con piernas cansadas, como el maratón real. Ojo antepié en la bajada a ritmo — Bondi 9, regla de aborto vigente.',km:28,pace:'MP 4:15',dur:140,metrics:{primary:'FC Z3-Z4 en bloque MP',secondary:'Ritmo 4:15/km sostenido'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo',detail:'10 km Z1. <strong>⛰️ Terreno:</strong> Z1 regenerativo — subí primero, bajá muy suave.',km:10,pace:'>5:50',dur:65,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -886,12 +889,12 @@ const PLAN = [
     kmTarget: 68,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'75 min.',km:0,dur:75},
-      {type:'quality',title:'Intervalos MP 6×2km',detail:'16 km: <strong>3 km cal + 6×2km @ 4:15/km (MP) con rec 2\' trote + 2 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 2/5:</strong> placa fraccionada, recuperación entre tramos protege la rodilla. Chequeo post-sesión. <strong>⛰️ Subida/bajada:</strong> corré los 2km de MP en el tramo más parejo; usá la recuperación (trote 2\') en la contrapendiente, así cada rep sale a GAP 4:15 limpio.',km:16,pace:'MP 4:15',dur:85,metrics:{primary:'Ritmo 4:15/km',secondary:'FC series 160-170 ppm (Z3-Z4)'},shoe:'Mach X 2'},
+      {type:'quality',title:'Intervalos MP 6×2km',detail:'16 km: <strong>3 km cal + 6×2km @ 4:15/km (MP) con rec 2\' trote + 2 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 2/5:</strong> placa fraccionada, recuperación entre tramos protege la rodilla. Chequeo post-sesión. <strong>⛰️ Terreno:</strong> corré los 2km de MP en el tramo más parejo; usá la recuperación (trote 2\') en la contrapendiente, así cada rep sale a GAP 4:15 limpio.',km:16,pace:'MP 4:15',dur:85,metrics:{primary:'Ritmo 4:15/km',secondary:'FC series 157-165 ppm (Z3-Z4)'},shoe:'Mach X 2'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'z2',title:'Z2 largo',detail:'16 km: Z2 @ 5:10-5:25/km. <strong>⛰️ Subida/bajada:</strong> Z2 largo — subí primero, bajá de vuelta.',km:16,pace:'5:10-5:25',dur:90,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 largo',detail:'16 km: Z2 @ 4:50-5:05/km. <strong>⛰️ Terreno:</strong> Z2 largo — subí primero, bajá de vuelta.',km:16,pace:'4:50-5:05',dur:90,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
-      {type:'long',title:'Fondo MP 30 km',detail:'30 km: <strong>5 km Z2 + 20 km @ 4:15/km (MP) + 5 km Z2</strong>. <strong>4 geles (km 8, 15, 22, 27).</strong> <strong>⛰️ Subida/bajada:</strong> bloque MP (4:15) AL FINAL bajando a casa (especificidad de carrera). Subí primero en Z2, girá, y corré el MP en la bajada de regreso. Vigilá antepié en la bajada a ritmo.',km:30,pace:'MP 4:15',dur:150,metrics:{primary:'FC Z3-Z4 en bloque MP',secondary:'Ritmo 4:15/km sostenido'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo',detail:'10 km Z1. <strong>⛰️ Subida/bajada:</strong> Z1 regenerativo — subí primero, bajá muy suave.',km:10,pace:'>5:50',dur:65,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo MP 30 km',detail:'30 km: <strong>5 km Z2 + 20 km @ 4:15/km (MP) + 5 km Z2</strong>. <strong>4 geles (km 8, 15, 22, 27).</strong> <strong>⛰️ Terreno (pref. ruta norte-sur plana):</strong> si no hay ruta plana, bloque MP (4:15) AL FINAL bajando a casa (especificidad de carrera). Subí primero en Z2, girá, y corré el MP en la bajada de regreso. Vigilá antepié en la bajada a ritmo.',km:30,pace:'MP 4:15',dur:150,metrics:{primary:'FC Z3-Z4 en bloque MP',secondary:'Ritmo 4:15/km sostenido'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo',detail:'10 km Z1. <strong>⛰️ Terreno:</strong> Z1 regenerativo — subí primero, bajá muy suave.',km:10,pace:'>5:50',dur:65,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -902,12 +905,12 @@ const PLAN = [
     kmTarget: 71,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'75 min.',km:0,dur:75},
-      {type:'z2',title:'Z2 + strides',detail:'15 km: Z2 @ 5:10-5:25/km + 8×100m strides. <strong>⛰️ Subida/bajada:</strong> Z2 + strides — subí primero, bajá de vuelta; strides al final en lo más llano.',km:15,pace:'5:10-5:25',dur:85,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 + strides',detail:'15 km: Z2 @ 4:50-5:05/km + 8×100m strides. <strong>⛰️ Terreno:</strong> Z2 + strides — subí primero, bajá de vuelta; strides al final en lo más llano.',km:15,pace:'4:50-5:05',dur:85,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
-      {type:'quality',title:'Tempo umbral largo',detail:'14 km: <strong>3 km cal + 8 km @ 4:15/km + 3 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 3/5:</strong> placa en esfuerzo continuo (sin recuperación). Chequeo post-sesión. <strong>⛰️ Subida/bajada:</strong> bloque 4:15 continuo en el eje más parejo disponible. Ritmo manda; en repecho el GAP sube, no lo persigas con FC.',km:14,pace:'4:15',dur:75,metrics:{primary:'Ritmo 4:15/km',secondary:'FC 165-174 ppm (Z4)'},shoe:'Mach X 2'},
+      {type:'quality',title:'Tempo umbral largo',detail:'14 km: <strong>3 km cal + 8 km @ 4:15/km + 3 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 3/5:</strong> placa en esfuerzo continuo (sin recuperación). Chequeo post-sesión. <strong>⛰️ Terreno:</strong> bloque 4:15 continuo en el eje más parejo disponible. Ritmo manda; en repecho el GAP sube, no lo persigas con FC.',km:14,pace:'4:15',dur:75,metrics:{primary:'Ritmo 4:15/km',secondary:'FC 162-171 ppm (Z4)'},shoe:'Mach X 2'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'long',title:'Fondo específico 32 km',detail:'32 km: <strong>5 km Z2 + 22 km @ 4:15/km (MP) + 5 km Z2</strong>. Máximo volumen específico. <strong>4-5 geles (km 8, 15, 22, 27, 30).</strong> <strong>⛰️ Subida/bajada:</strong> el fondo más largo del plan. Bloque MP (4:15, 22km) AL FINAL bajando a casa. Subí primero en Z2 al punto alto, desplegá el MP en el regreso descendente. Máxima atención al antepié en la bajada larga a ritmo.',km:32,pace:'MP 4:15',dur:160,metrics:{primary:'FC Z3-Z4 en bloque MP',secondary:'Ritmo 4:15/km'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo',detail:'10 km Z1. <strong>⛰️ Subida/bajada:</strong> Z1 regenerativo — subí primero, bajá muy suave.',km:10,pace:'>5:50',dur:65,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo específico 32 km',detail:'32 km: <strong>5 km Z2 + 22 km @ 4:15/km (MP) + 5 km Z2</strong>. Máximo volumen específico. <strong>4-5 geles (km 8, 15, 22, 27, 30).</strong> <strong>⛰️ Terreno (pref. ruta norte-sur plana):</strong> si no hay ruta plana, el fondo más largo del plan. Bloque MP (4:15, 22km) AL FINAL bajando a casa. Subí primero en Z2 al punto alto, desplegá el MP en el regreso descendente. Máxima atención al antepié en la bajada larga a ritmo.',km:32,pace:'MP 4:15',dur:160,metrics:{primary:'FC Z3-Z4 en bloque MP',secondary:'Ritmo 4:15/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo',detail:'10 km Z1. <strong>⛰️ Terreno:</strong> Z1 regenerativo — subí primero, bajá muy suave.',km:10,pace:'>5:50',dur:65,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -918,12 +921,12 @@ const PLAN = [
     kmTarget: 66,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'75 min.',km:0,dur:75},
-      {type:'quality',title:'Intervalos MP 5×3km',detail:'18 km: <strong>3 km cal + 5×3km @ 4:15/km (MP) con rec 2\' trote + 2 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 4/5:</strong> tramos largos de placa, última prueba en formato serie. Chequeo post-sesión. <strong>⛰️ Subida/bajada:</strong> los 3km de MP en el tramo más parejo; recuperación en contrapendiente. Cuidá que la pendiente no falsee el GAP.',km:18,pace:'MP 4:15',dur:95,metrics:{primary:'Ritmo 4:15/km',secondary:'FC series 160-170 ppm (Z3-Z4)'},shoe:'Mach X 2'},
+      {type:'quality',title:'Intervalos MP 5×3km',detail:'18 km: <strong>3 km cal + 5×3km @ 4:15/km (MP) con rec 2\' trote + 2 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 4/5:</strong> tramos largos de placa, última prueba en formato serie. Chequeo post-sesión. <strong>⛰️ Terreno:</strong> los 3km de MP en el tramo más parejo; recuperación en contrapendiente. Cuidá que la pendiente no falsee el GAP.',km:18,pace:'MP 4:15',dur:95,metrics:{primary:'Ritmo 4:15/km',secondary:'FC series 157-165 ppm (Z3-Z4)'},shoe:'Mach X 2'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'z2',title:'Z2 medio',detail:'14 km: Z2 @ 5:10-5:25/km. <strong>⛰️ Subida/bajada:</strong> Z2 medio — subí primero, bajá de vuelta.',km:14,pace:'5:10-5:25',dur:80,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:10-5:25/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 medio',detail:'14 km: Z2 @ 4:50-5:05/km. <strong>⛰️ Terreno:</strong> Z2 medio — subí primero, bajá de vuelta.',km:14,pace:'4:50-5:05',dur:80,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:50-5:05/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'75 min.',km:0,dur:75},
-      {type:'long',title:'Fondo MP simulación 28 km',detail:'28 km: <strong>5 km Z2 + 18 km @ 4:15/km (MP) + 5 km @ 4:10/km (push final)</strong>. Simula fatiga final de maratón. <strong>4 geles (km 8, 15, 22, 25).</strong> <strong>⛰️ Subida/bajada:</strong> bloque MP + push final (4:15→4:10) AL FINAL bajando. La bajada de regreso ayuda al push con piernas vaciadas. Neuroma en alerta máxima — es bajada rápida con fatiga.',km:28,pace:'MP 4:15 → 4:10',dur:140,metrics:{primary:'FC Z3-Z4 → Z4-Z5',secondary:'Ritmos 4:15 → 4:10'},shoe:'Bondi 9'},
-      {type:'z2',title:'Regenerativo',detail:'10 km Z1. <strong>⛰️ Subida/bajada:</strong> Z1 regenerativo — subí primero, bajá muy suave.',km:10,pace:'>5:50',dur:65,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo MP simulación 28 km',detail:'28 km: <strong>5 km Z2 + 18 km @ 4:15/km (MP) + 5 km @ 4:10/km (push final)</strong>. Simula fatiga final de maratón. <strong>4 geles (km 8, 15, 22, 25).</strong> <strong>⛰️ Terreno (pref. ruta norte-sur plana):</strong> si no hay ruta plana, bloque MP + push final (4:15→4:10) AL FINAL bajando. La bajada de regreso ayuda al push con piernas vaciadas. Neuroma en alerta máxima — es bajada rápida con fatiga.',km:28,pace:'MP 4:15 → 4:10',dur:140,metrics:{primary:'FC Z3-Z4 → Z4-Z5',secondary:'Ritmos 4:15 → 4:10'},shoe:'Bondi 9'},
+      {type:'z2',title:'Regenerativo',detail:'10 km Z1. <strong>⛰️ Terreno:</strong> Z1 regenerativo — subí primero, bajá muy suave.',km:10,pace:'>5:50',dur:65,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -934,11 +937,11 @@ const PLAN = [
     kmTarget: 43,
     sessions: [
       {type:'gym',title:'Gym tren superior',detail:'60 min: volumen reducido.',km:0,dur:60},
-      {type:'z2',title:'Z2 suave',detail:'12 km: Z2 @ 5:20-5:35/km. <strong>⛰️ Subida/bajada:</strong> Z2 suave pre-tune-up — subí primero, bajá de vuelta. Piernas frescas para el 21K.',km:12,pace:'5:20-5:35',dur:70,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:20-5:35/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 suave',detail:'12 km: Z2 @ 5:00-5:15/km. <strong>⛰️ Terreno:</strong> Z2 suave pre-tune-up — subí primero, bajá de vuelta. Piernas frescas para el 21K.',km:12,pace:'5:00-5:15',dur:70,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:00-5:15/km'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym tren inferior',detail:'60 min: ligero.',km:0,dur:60},
-      {type:'quality',title:'Tempo corto',detail:'11 km: <strong>2 km cal + 7 km @ 4:20/km + 2 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 5/5:</strong> ensayo final antes del 21K. Si la rodilla acompañó los 5 pasos, luz verde para correr con ellas. <strong>⛰️ Subida/bajada:</strong> bloque 4:20 en el tramo más parejo cercano; ritmo constante.',km:11,pace:'4:20',dur:60,metrics:{primary:'Ritmo 4:20/km',secondary:'FC 163-172 ppm (Z4)'},shoe:'Mach X 2'},
+      {type:'quality',title:'Tempo corto',detail:'11 km: <strong>2 km cal + 7 km @ 4:20/km + 2 km enfriamiento</strong>. <strong>👟 Mach X 2 — reintroducción paso 5/5:</strong> ensayo final antes del 21K. Si la rodilla acompañó los 5 pasos, luz verde para correr con ellas. <strong>⛰️ Terreno:</strong> bloque 4:20 en el tramo más parejo cercano; ritmo constante.',km:11,pace:'4:20',dur:60,metrics:{primary:'Ritmo 4:20/km',secondary:'FC 160-169 ppm (Z4)'},shoe:'Mach X 2'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'long',title:'Fondo ligero 20 km',detail:'20 km: Z2 @ 5:20-5:35/km. <strong>2 geles (km 10, 16).</strong> <strong>⛰️ Subida/bajada:</strong> Z2 parejo — subí primero, bajá suave. Sin bloque, taper.',km:20,pace:'5:20-5:35',dur:110,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:20-5:35/km'},shoe:'Bondi 9'},
+      {type:'long',title:'Fondo ligero 20 km',detail:'20 km: Z2 @ 5:00-5:15/km. <strong>2 geles (km 10, 16).</strong> <strong>⛰️ Terreno:</strong> Z2 parejo — subí primero, bajá suave. Sin bloque, taper.',km:20,pace:'5:00-5:15',dur:110,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:00-5:15/km'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso completo',detail:'Preparación 21K.',km:0,dur:0}
     ]
   },
@@ -950,9 +953,9 @@ const PLAN = [
     kmTarget: 34,
     sessions: [
       {type:'gym',title:'Gym muy ligero',detail:'45 min: solo activación.',km:0,dur:45},
-      {type:'z2',title:'Z2 suave',detail:'10 km: Z2 @ 5:25-5:40/km. <strong>⛰️ Subida/bajada:</strong> Z2 suave — subí primero, bajá de vuelta.',km:10,pace:'5:25-5:40',dur:60,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo suave'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 suave',detail:'10 km: Z2 @ 5:05-5:20/km. <strong>⛰️ Terreno:</strong> Z2 suave — subí primero, bajá de vuelta.',km:10,pace:'5:05-5:20',dur:60,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo suave'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'quality',title:'Strides + activación',detail:'8 km: <strong>5 km Z2 suave + 6×100m strides + 2 km trote</strong>. <strong>⛰️ Subida/bajada:</strong> Z2 + strides; strides en lo más llano. Activación pre-carrera.',km:8,pace:'Z2 + strides',dur:50,metrics:{primary:'FC Z2, activación',secondary:'Ritmo Z2 suave'},shoe:'Bondi 9'},
+      {type:'quality',title:'Strides + activación',detail:'8 km: <strong>5 km Z2 suave + 6×100m strides + 2 km trote</strong>. <strong>⛰️ Terreno:</strong> Z2 + strides; strides en lo más llano. Activación pre-carrera.',km:8,pace:'Z2 + strides',dur:50,metrics:{primary:'FC Z2, activación',secondary:'Ritmo Z2 suave'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso total',detail:'Preparación carrera.',km:0,dur:0},
       {type:'rest',title:'Caminata 20\' + strides',detail:'Activación muy ligera. 3×60m strides a ritmo MP.',km:0,dur:20},
       {type:'race',title:'🏁 21K Buenos Aires',detail:'<strong>CARRERA: 21K de Buenos Aires</strong> (mismo circuito que maratón sept). <strong>Estrategia:</strong> km 1-10 @ MP (4:15), km 10-17 @ MP-5s (4:10), km 17-21 @ sensación. <strong>3 gels (km 6, 12, 17).</strong> Reconocer circuito y sectores clave. <strong>Calzado: Mach X 2</strong> (ya rodadas en 5 sesiones de calidad sem 10-14; ganás segundos/km vs trainer absorbente). <strong>Plan B: Clifton 10</strong> si la rodilla no acompañó la reintroducción. <strong>⛰️ Terreno:</strong> Buenos Aires PLANO — ritmo parejo, sin estrategia de pendiente. La pendiente no es variable acá.',km:21,pace:'MP test',dur:90,metrics:{primary:'Tiempo objetivo: 1:28-1:30',secondary:'Validar MP y nutrición'},shoe:'Mach X 2'}
@@ -966,12 +969,12 @@ const PLAN = [
     kmTarget: 48,
     sessions: [
       {type:'rest',title:'Descanso post-21K',detail:'Recovery total.',km:0,dur:0},
-      {type:'z2',title:'Trote suave recovery',detail:'8 km: Z1-Z2 muy suave @ 5:45-6:00/km. <strong>⛰️ Subida/bajada:</strong> recovery Z1-Z2 — subí primero, bajá muy suave. Post-21K.',km:8,pace:'5:45-6:00',dur:50,metrics:{primary:'FC <152 ppm',secondary:'Ritmo muy suave'},shoe:'Bondi 9'},
+      {type:'z2',title:'Trote suave recovery',detail:'8 km: Z1-Z2 muy suave @ 5:25-5:40/km. <strong>⛰️ Terreno:</strong> recovery Z1-Z2 — subí primero, bajá muy suave. Post-21K.',km:8,pace:'5:25-5:40',dur:50,metrics:{primary:'FC <152 ppm',secondary:'Ritmo muy suave'},shoe:'Bondi 9'},
       {type:'gym',title:'Gym ligero',detail:'50 min: mantenimiento.',km:0,dur:50},
-      {type:'z2',title:'Z2 medio',detail:'12 km: Z2 @ 5:15-5:30/km. <strong>⛰️ Subida/bajada:</strong> Z2 medio — subí primero, bajá de vuelta.',km:12,pace:'5:15-5:30',dur:70,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:15-5:30/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 medio',detail:'12 km: Z2 @ 4:55-5:10/km. <strong>⛰️ Terreno:</strong> Z2 medio — subí primero, bajá de vuelta.',km:12,pace:'4:55-5:10',dur:70,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 4:55-5:10/km'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'long',title:'Fondo taper 22 km',detail:'22 km: <strong>15 km Z2 @ 5:20-5:30/km + 5 km @ 4:15/km (MP) + 2 km trote</strong>. Último fondo con MP. <strong>2 geles (km 10, 17).</strong> <strong>⛰️ Subida/bajada:</strong> bloque MP (4:15, 5km) AL FINAL bajando a casa. Último fondo con MP, misma lógica de especificidad. Subí en Z2 primero, MP en la bajada.',km:22,pace:'Z2 + MP',dur:115,metrics:{primary:'FC Z2 → Z3-Z4',secondary:'Confirmar MP 4:15'},shoe:'Bondi 9'},
-      {type:'z2',title:'Trote ligero',detail:'8 km Z1. <strong>⛰️ Subida/bajada:</strong> Z1 — subí primero, bajá muy suave.',km:8,pace:'>5:50',dur:50,metrics:{primary:'FC <147 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
+      {type:'long',title:'Fondo taper 22 km',detail:'22 km: <strong>15 km Z2 @ 5:00-5:10/km + 5 km @ 4:15/km (MP) + 2 km trote</strong>. Último fondo con MP. <strong>2 geles (km 10, 17).</strong> <strong>⛰️ Terreno (pref. ruta norte-sur plana):</strong> si no hay ruta plana, bloque MP (4:15, 5km) AL FINAL bajando a casa. Último fondo con MP, misma lógica de especificidad. Subí en Z2 primero, MP en la bajada.',km:22,pace:'Z2 + MP',dur:115,metrics:{primary:'FC Z2 → Z3-Z4',secondary:'Confirmar MP 4:15'},shoe:'Bondi 9'},
+      {type:'z2',title:'Trote ligero',detail:'8 km Z1. <strong>⛰️ Terreno:</strong> Z1 — subí primero, bajá muy suave.',km:8,pace:'>5:50',dur:50,metrics:{primary:'FC <145 ppm (Z1)',secondary:'Ritmo >5:50/km'},shoe:'Bondi 9'}
     ]
   },
   {
@@ -982,11 +985,11 @@ const PLAN = [
     kmTarget: 36,
     sessions: [
       {type:'gym',title:'Gym ligero',detail:'45 min.',km:0,dur:45},
-      {type:'z2',title:'Z2 suave',detail:'10 km: Z2 @ 5:20-5:35/km. <strong>⛰️ Subida/bajada:</strong> Z2 suave — subí primero, bajá de vuelta. Taper.',km:10,pace:'5:20-5:35',dur:60,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo 5:20-5:35/km'},shoe:'Bondi 9'},
+      {type:'z2',title:'Z2 suave',detail:'10 km: Z2 @ 5:00-5:15/km. <strong>⛰️ Terreno:</strong> Z2 suave — subí primero, bajá de vuelta. Taper.',km:10,pace:'5:00-5:15',dur:60,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo 5:00-5:15/km'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'quality',title:'MP corto + strides',detail:'10 km: <strong>3 km cal + 4 km @ 4:15/km (MP) + 2 km trote + 4×80m strides</strong>. Última sesión MP. <strong>⛰️ Subida/bajada:</strong> los 4km de MP en tramo parejo; strides en llano para soltar. Última afinada de MP.',km:10,pace:'MP 4:15',dur:55,metrics:{primary:'Confirmar MP 4:15',secondary:'FC 160-170 ppm'},shoe:'Clifton 10'},
+      {type:'quality',title:'MP corto + strides',detail:'10 km: <strong>3 km cal + 4 km @ 4:15/km (MP) + 2 km trote + 4×80m strides</strong>. Última sesión MP. <strong>⛰️ Terreno:</strong> los 4km de MP en tramo parejo; strides en llano para soltar. Última afinada de MP.',km:10,pace:'MP 4:15',dur:55,metrics:{primary:'Confirmar MP 4:15',secondary:'FC 157-165 ppm'},shoe:'Clifton 10'},
       {type:'gym',title:'Gym ligero',detail:'40 min: activación.',km:0,dur:40},
-      {type:'long',title:'Fondo taper 16 km',detail:'16 km: Z2 @ 5:25-5:40/km. <strong>1 gel en km 10.</strong> <strong>⛰️ Subida/bajada:</strong> Z2 suave — subí primero, bajá de vuelta. Taper.',km:16,pace:'5:25-5:40',dur:90,metrics:{primary:'FC 148-155 ppm (Z2)',secondary:'Ritmo suave'},shoe:'Bondi 9'},
+      {type:'long',title:'Fondo taper 16 km',detail:'16 km: Z2 @ 5:05-5:20/km. <strong>1 gel en km 10.</strong> <strong>⛰️ Terreno:</strong> Z2 suave — subí primero, bajá de vuelta. Taper.',km:16,pace:'5:05-5:20',dur:90,metrics:{primary:'FC 145-152 ppm (Z2)',secondary:'Ritmo suave'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso o caminata',detail:'',km:0,dur:0}
     ]
   },
@@ -997,11 +1000,11 @@ const PLAN = [
     end: '13 sep',
     kmTarget: 26,
     sessions: [
-      {type:'z2',title:'Trote suave',detail:'8 km: Z2 @ 5:30-5:45/km. <strong>⛰️ Subida/bajada:</strong> Z2 suave — subí primero, bajá de vuelta.',km:8,pace:'5:30-5:45',dur:50,metrics:{primary:'FC 148-155 ppm',secondary:'Ritmo suave'},shoe:'Bondi 9'},
+      {type:'z2',title:'Trote suave',detail:'8 km: Z2 @ 5:10-5:25/km. <strong>⛰️ Terreno:</strong> Z2 suave — subí primero, bajá de vuelta.',km:8,pace:'5:10-5:25',dur:50,metrics:{primary:'FC 145-152 ppm',secondary:'Ritmo suave'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'quality',title:'Strides finales',detail:'8 km: <strong>5 km Z2 suave + 6×80m strides @ MP + 2 km trote</strong>. Activación neuromuscular. <strong>⛰️ Subida/bajada:</strong> strides en lo más llano; activación neuromuscular.',km:8,pace:'Z2 + strides',dur:50,metrics:{primary:'Activación MP',secondary:'FC Z2 en base'},shoe:'Bondi 9'},
+      {type:'quality',title:'Strides finales',detail:'8 km: <strong>5 km Z2 suave + 6×80m strides @ MP + 2 km trote</strong>. Activación neuromuscular. <strong>⛰️ Terreno:</strong> strides en lo más llano; activación neuromuscular.',km:8,pace:'Z2 + strides',dur:50,metrics:{primary:'Activación MP',secondary:'FC Z2 en base'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'z2',title:'Trote muy suave',detail:'10 km: Z2 @ 5:35-5:50/km. <strong>⛰️ Subida/bajada:</strong> Z2 muy suave — subí primero, bajá de vuelta.',km:10,pace:'5:35-5:50',dur:60,metrics:{primary:'FC 148-155 ppm',secondary:'Ritmo muy suave'},shoe:'Bondi 9'},
+      {type:'z2',title:'Trote muy suave',detail:'10 km: Z2 @ 5:15-5:30/km. <strong>⛰️ Terreno:</strong> Z2 muy suave — subí primero, bajá de vuelta.',km:10,pace:'5:15-5:30',dur:60,metrics:{primary:'FC 145-152 ppm',secondary:'Ritmo muy suave'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso total',detail:'',km:0,dur:0},
       {type:'rest',title:'Descanso total',detail:'',km:0,dur:0}
     ]
@@ -1013,9 +1016,9 @@ const PLAN = [
     end: '20 sep',
     kmTarget: 48,
     sessions: [
-      {type:'z2',title:'Trote corto',detail:'6 km: Z2 @ 5:40-5:55/km. <strong>⛰️ Subida/bajada:</strong> Z2 muy suave — subí primero, bajá de vuelta.',km:6,pace:'5:40-5:55',dur:40,metrics:{primary:'FC 148-155 ppm',secondary:'Ritmo muy suave'},shoe:'Bondi 9'},
+      {type:'z2',title:'Trote corto',detail:'6 km: Z2 @ 5:20-5:35/km. <strong>⛰️ Terreno:</strong> Z2 muy suave — subí primero, bajá de vuelta.',km:6,pace:'5:20-5:35',dur:40,metrics:{primary:'FC 145-152 ppm',secondary:'Ritmo muy suave'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso',detail:'',km:0,dur:0},
-      {type:'quality',title:'Activación pre-carrera',detail:'6 km: <strong>3 km trote Z2 + 4×60m strides @ MP + 2 km trote</strong>. Última activación. <strong>⛰️ Subida/bajada:</strong> strides en llano; activación final.',km:6,pace:'Z2 + strides',dur:40,metrics:{primary:'Activación final',secondary:'Sensación MP'},shoe:'Bondi 9'},
+      {type:'quality',title:'Activación pre-carrera',detail:'6 km: <strong>3 km trote Z2 + 4×60m strides @ MP + 2 km trote</strong>. Última activación. <strong>⛰️ Terreno:</strong> strides en llano; activación final.',km:6,pace:'Z2 + strides',dur:40,metrics:{primary:'Activación final',secondary:'Sensación MP'},shoe:'Bondi 9'},
       {type:'rest',title:'Descanso total',detail:'Hidratación, nutrición.',km:0,dur:0},
       {type:'rest',title:'Caminata 15\' + 3 strides',detail:'Activación muy suave.',km:0,dur:15},
       {type:'rest',title:'Descanso total',detail:'Preparación mental y física.',km:0,dur:0},
